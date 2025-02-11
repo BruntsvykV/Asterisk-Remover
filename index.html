@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="public/icon_asterisk.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Asterisk Remover</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>
+                Asterisk Remover!!!
+            </h1>
+        </div>
+        <div class="managing-data">
+            <textarea 
+                type="text" 
+                id="asterisk" 
+                placeholder="Add some asterisk ; )" 
+                rows="5" 
+                cols="100"
+            ></textarea>
+            <div class="btn-container">
+                <button 
+                    class="btn btn-remove" 
+                    id="removeAsterisk" 
+                    onclick="handleRemoveAsterisk()"
+                >
+                    Remove Asterisk
+                </button>
+                <button 
+                    class="btn btn-copy" 
+                    id="copyClearText" 
+                    onclick="handleCopyText()"
+                >
+                    Copy Clear Text
+                </button>
+                <button 
+                    class="btn btn-reset" 
+                    id="resetText" 
+                    onclick="handleResetText()"
+                >
+                    Reset Text
+                </button>
+            </div>
+        </div>
+        <div class="text-out">
+            <span id="clearTextOut"></span>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
