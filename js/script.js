@@ -1,18 +1,18 @@
 const getCleanText = () => {
     let text = document.getElementById('asterisk').value
         .replaceAll("*", "")
-        .replace(/\/\$/g, "$")
-        .replace(/\\&/g, " and ")
-        .replace(/\/\.{3}/g, "...")
-        .replace(/&/g, " and ")
-        .replace(/™/g, " TM")
-        .replace(/>/g, "")
-        .replace(/\\\\/g, " ")
-        .replace(/\\_/g, " ")
-        .replace(/\n---\n/g, "")
-        .replace(/---/g, "");
+        .replace(/[\\/]\$/g, "$")          // заміна /$ або \$ на $
+        .replace(/\\&/g, " and ")          // \& на " and "
+        .replace(/\/\.{3}/g, "...")        // /... на ...
+        .replace(/&/g, " and ")            // звичайне & на " and "
+        .replace(/™/g, " TM")              // ™ на " TM"
+        .replace(/>/g, "")                 // > видаляється
+        .replace(/\\\\/g, " ")             // \\ на пробіл
+        .replace(/\\_/g, " ")              // \_ на пробіл
+        .replace(/\n---\n/g, "")           // "---" з переносами видаляється
+        .replace(/---/g, "");              // "---" без переносів також видаляється
 
-    // Видалити пробіли або перенос рядка в кінці тексту ( Hi ChatGPT ;) )
+    // Видалити пробіли і переноси рядка в кінці (якщо є)
     text = text.replace(/[\s\n\r]+$/, '');
 
     return text;
