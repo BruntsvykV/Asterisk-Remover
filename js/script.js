@@ -4,6 +4,7 @@ const getCleanText = () => {
         .replace(/[\\/]\$/g, "$")          // заміна /$ або \$ на $
         .replace(/\\&/g, " and ")          // \& на " and "
         .replace(/\/\.{3}/g, "...")        // /... на ...
+        .replace(/\\\.{3}/g, "...")        // \... на ...
         .replace(/&/g, " and ")            // звичайне & на " and "
         .replace(/™/g, " TM")              // ™ на " TM"
         .replace(/>/g, "")                 // > видаляється
