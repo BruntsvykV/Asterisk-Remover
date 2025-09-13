@@ -104,3 +104,7 @@ textarea::placeholder {
 .btn-reset {
     background-color: rgb(248, 7, 7);
 }
+
+.btn-uppercase {
+    background-color: rgb(249, 140, 6);
+}
