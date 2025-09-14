@@ -20,9 +20,9 @@ const getCleanText = () => {
 };
 
 const getUppercaseText = () => {
-    let text = document.getElementById('asterisk').value.toUpperCase();
+    let upperCaseText = document.getElementById('asterisk').value.toUpperCase();
 
-    return text;
+    return upperCaseText;
 };
 
 handleRemoveAsterisk = () => {
@@ -30,8 +30,8 @@ handleRemoveAsterisk = () => {
 };
 
 handleCopyText = () => {
-    document.getElementById('clearTextOut').innerHTML = getCleanText();
-    navigator.clipboard.writeText(getCleanText());
+    let textOut = document.getElementById('clearTextOut').textContent;
+    navigator.clipboard.writeText(textOut);
 };
 
 handleResetText = () => {
